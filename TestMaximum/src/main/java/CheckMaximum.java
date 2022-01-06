@@ -6,26 +6,11 @@
 
 public class CheckMaximum {
     /*
-    * findMax method with three INTEGER @param
-    * @return INTEGER
-    * checking maximum among three values.
-    * */
-    public static Integer findMax(Integer a,Integer b,Integer c)
-    {
-        if((a.compareTo(b)>0)&&(a.compareTo(c)>0))
-            return a;
-        else
-        if((b.compareTo(a)>0)&&(b.compareTo(c)>0))
-            return b;
-        else
-            return c;
-    }
-    /*
-     * findMax method with three FLOAT @param
-     * @return FLOAT
-     * checking maximum among three values.
+     * findMax method with three E @param
+     * @return E
+     * checking maximum among three values using GENERICS.
      * */
-    public static Float findMax(Float a,Float b,Float c)
+    public static <E extends Comparable<E>> E findMax(E a,E b,E c)
     {
         if((a.compareTo(b)>0)&&(a.compareTo(c)>0))
             return a;
@@ -47,5 +32,7 @@ public class CheckMaximum {
         float c=9.2f;
         //calling findMax method with float values.
         System.out.println("5.4,16.6,9.2 and max is: "+findMax(a,b,c));
+        //calling findMax method with string values.
+        System.out.println("Apple,Peach,Banana and max is: "+findMax("Apple","Peach","Banana"));
     }
 }
