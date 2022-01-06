@@ -15,9 +15,17 @@ public class CheckMaximum {
     public static <E extends Comparable<E>> void findMax(ArrayList a)
     {
         Collections.sort(a);
+        //calling printMax method to print the max among the givrn inputs.
+        printMax(a);
+    }
+    /*
+    * printMax method to print the maximum among given inputs.
+    * @param sorted arraylist
+    * */
+    public static void printMax(ArrayList a)
+    {
         System.out.println("max is: "+a.get(a.size()-1));
     }
-
 
     public static void main(String[] ar)
     {
